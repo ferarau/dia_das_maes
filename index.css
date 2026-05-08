@@ -1,0 +1,256 @@
+/* Reset completo */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* Corpo do site */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(135deg, #ffe9e9 0%, #ffc3a0 50%, #ffafbd 100%);
+    font-family: 'Playfair Display SC', serif;
+
+    padding: 40px 0 140px 0;
+}
+
+/* Container principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(214, 52, 71, 0.2);
+
+    text-align: center;
+
+    max-width: 90%;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid #ffafbd;
+}
+
+/* Título */
+.titulo-site {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #d63447;
+
+    margin: 0 0 5px 0;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Frase */
+#frase {
+    font-size: 1.1rem;
+    color: #555;
+
+    margin: 10px 0;
+
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Moldura */
+.moldura {
+    background: white;
+
+    padding: 8px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    overflow: hidden;
+
+    transition: border-color 0.4s ease;
+
+    border: 2px solid transparent;
+}
+
+/* Hover moldura */
+.moldura:hover {
+    border-color: #ff5f6d;
+}
+
+/* Imagem */
+img {
+    width: 100%;
+    max-width: 350px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: transform 0.6s ease;
+}
+
+/* Zoom imagem */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Texto instrução */
+.instrucao {
+    margin-top: 10px;
+
+    font-size: 0.8rem;
+    color: #ff5f6d;
+
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Botão carta */
+.btn-abrir-carta {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background: #d63447;
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+    border-radius: 50px;
+
+    font-family: 'Playfair Display SC', serif;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(214, 52, 71, 0.4);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    z-index: 100;
+
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Hover botão */
+.btn-abrir-carta:hover {
+    transform: scale(1.1);
+    background: #ff5f6d;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Carta */
+.carta-container {
+    background: #fff;
+
+    width: 85%;
+    max-width: 400px;
+
+    padding: 40px 30px;
+
+    border-radius: 15px;
+
+    position: relative;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+    border: 5px solid #ffafbd;
+
+    animation: aparecer 0.4s ease-out;
+}
+
+/* Animação */
+@keyframes aparecer {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Texto carta */
+.papel-carta {
+    font-family: 'Georgia', serif;
+    color: #444;
+
+    line-height: 1.6;
+}
+
+.papel-carta h3 {
+    color: #d63447;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+/* Assinatura */
+.assinatura {
+    text-align: right;
+
+    margin-top: 30px;
+
+    font-style: italic;
+
+    color: #d63447;
+}
+
+/* Botão fechar */
+.btn-fechar {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    background: none;
+    border: none;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: #999;
+}
+
+/* PLAYER SPOTIFY */
+#player-spotify {
+    margin-top: 30px;
+
+    width: 90%;
+    max-width: 400px;
+    height: 80px;
+
+    border: none;
+    border-radius: 12px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Fotos com a Mamãe</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="titulo-site">Fotos com a Mamãe </h2>
+        <h1 id="frase"></h1>
+
+        <div class="moldura">
+            <img id="imagem" src="" alt="Nossa lembrança" onclick="proximaFoto()">
+        </div>
+
+        <p class="instrucao">Toque na imagem para ver o próximo momento</p>
+    </div>
+
+    <button class="btn-abrir-carta" onclick="toggleCarta()">
+        <span class="icone">💌</span>
+        <span class="texto">Ler cartinha</span>
+    </button>
+
+    <div id="overlay-carta" class="overlay">
+        <div class="carta-container">
+            <button class="btn-fechar" onclick="toggleCarta()">✕</button>
+
+            <div class="papel-carta">
+                <h3>Para a melhor Mamãe do mundo! ❤️</h3>
+
+                <p>Mãe, criei este site para celebrar nossos momentos. Cada foto aqui me lembra o quanto sou sortuda por ter você.</p>
+
+                <p>Obrigado por ser meu porto seguro, minha melhor amiga e meu maior exemplo de vida.</p>
+
+                <p>Tenho muito orgulho da mulher que você é e de todo seu esforço para sempre nos fazer feliz.</p>
+
+                <p>Te amo hoje e sempre!</p>
+
+                <p class="assinatura">
+                    Com todo o meu amor, <br> Fernanda
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PLAYER SPOTIFY -->
+    <iframe
+        id="player-spotify"
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/3idU6lZVKD6hvGjnpSHde8?utm_source=generator"
+        width="100%"
+        height="80"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+
+    <script src="index.js"></script>
+</body>
+</html>
